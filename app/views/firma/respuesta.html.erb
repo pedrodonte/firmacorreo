@@ -1,0 +1,67 @@
+<div class="panel panel-default">
+			<div class="panel-heading">Instructivo</div>
+			  <div class="panel-body">
+			    Pasos a Seguir:
+				<ol>
+				    <li>Seleccionar Imagen, Dar Click Derecho y Elegir "Copiar"</li>
+					<li>Abrir Correo OutLook</li>
+					<li>Seleccionar Opción "Archivo"</li>
+					<li>Seleccionar Opciones</li>
+					<li>Pinchar Correo</li>
+					<li>Pinchar Firmas</li>
+					<li>Click Derecho y Seleccionar Opción Pegar</li>
+					<li>Finalmente Debe Aceptar en Todas las Ventanas</li>
+				</ol>
+			  </div>
+			</div>
+
+			<div class="panel panel-info">
+				<div class="panel-heading">Pie de Firma</div>
+			  <div class="panel-body">
+			     <!-- -->
+				 
+				  <% if @firma2 %>
+				  	  
+				  <table id="tablaFirmaMail">
+					  <tr>
+						  <td> <img src="/assets/image001.png" height="106" width="76"/> </td>
+					  
+							<td> 
+								<table >
+									<tr>
+									  <td>
+									  	<span id="spNombre"><%= @firma2[:nombre] %></span>
+									  </td>
+									</tr>
+									<tr>
+									  <td>
+									  	<span id="spOpcion"><%= @firma2[:departamento] %></span>
+									  </td>
+									</tr>
+									<tr>
+									  <td>
+									    <span id="spMail">Email: <%= @firma2[:email] %></span>
+									  </td>
+									</tr>
+									<tr>
+									  <td>
+									  <span id="spFono">Fono: <%= @firma2[:fono] %></span>
+									  <span id="spAnexo">/Red Minsal: <%= @firma2[:anexo] %></span>
+									  </td>
+									</tr>
+									<tr>
+									  <td>
+									  <span id="spLink"><%= link_to "www.fonasa.cl", "http://www.fonasa.cl", :target => "_blank" %></span>
+									  </td>
+									</tr>
+								  </table>
+							</td>
+					  </tr>
+					 
+			      </table> 
+				  
+				  <% end %>
+				  
+			  </div>
+			</div>
+			<%= link_to 'Volver', root_path ,:class => 'btn btn-primary' %>

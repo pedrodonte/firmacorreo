@@ -1,0 +1,102 @@
+
+
+<%= form_for @firma, :url => {:controller => "firma", :action => "respuesta"} do |form| %>
+    
+   
+   <div class="panel panel-default" style="margin:0 100px;">
+	
+		<div class="panel-body">
+			<h1>Generación Firma de Correo Institucional <img src="/assets/Logo+Fonasa+2012.png" height="80" width="90"/></h1>
+		</div>
+	
+		<div class="panel-body">
+
+			<div class="form-group">
+			
+			
+				<%= form.label :Nombre, "Nombre:" %> 
+				<%= form.text_field :nombre, :placeholder => 'Ingrese el Nombre' , :class => 'form-control' , :required => true%>
+			</div>
+
+			<div class="form-group">
+				<%= form.label :departamento, "Departamento:" %> 
+				<select name="firma[departamento]" id="firma_departamento" class="form-control" required="required">
+				  <option value="0">Seleccione su Departamento...</option>
+				  <option>Directora Nacional</option>
+				  <option>Jefa de Gabinete</option>
+				  <option>Asesora técnica</option>
+				  <option>Dirección Zonal Norte</option>
+				  <option>Dirección Zonal Centro Norte</option>
+				  <option>Dirección Zonal Centro Sur</option>
+				  <option>Dirección Zonal Sur</option>
+				  <option>Dpto. Auditoria</option>
+				  <option>Dpto. Comunicaciones y Marketing</option>
+				  <option>Dpto. Fiscalía</option>
+				  <option>Dpto. Comercialización</option>
+				  <option>Subdpto. Gestión Comercial Privados</option>
+				  <option>Subdpto. Gestión Comercial Públicos (S)</option>
+				  <option>Dpto. Planificación Institucional</option>
+				  <option>Subdpto. Plan de Beneficios</option>
+				  <option>Subdpto. Estudios</option>
+				  <option>Subdpto. Control de Gestión y Procesos</option>
+				  <option>Dpto. Gestión Financiera del Seguro</option>
+				  <option>Subdpto. Programación Financiera</option>
+				  <option>Subdpto. Recaudación y Fiscalización de Cotizaciones</option>
+				  <option>Dpto. Control de Calidad y Prestaciones (S)</option>
+				  <option>Dpto. Fiscalización de Prestaciones (S)</option>
+				  <option>Dpto. Tecnología de Información y Procesos</option>
+				  <option>Subdpto. Innovación</option>
+				  <option>Subdpto. Operaciones</option>
+				  <option>Subdpto.  Gestión de Contratos y Presupuesto</option>
+				  <option>Subdpto. Procesos</option>
+				  <option>Dpto. Gestión Territorial</option>
+				  <option>Subdpto. Canales de atención</option>
+				  <option>Subdpto. Gestión de Beneficiarios</option>
+				  <option>Subdpto. Gestión atención Usuarios</option>
+				  <option>Subdpto. Proyectos y Calidad de Gestión</option>
+				  <option>Dpto. Gestión Personas, Administración y Finanzas</option>
+				  <option>Subdpto. Administración</option>
+				  <option>Subdpto. Gestión de Personas</option>
+				  <option>Subdpto. Finanzas</option>
+			    </select>
+		    </div>
+			
+			<div class="form-group">
+				<%= form.label :email, "Email:" %> 
+				<%= form.text_field :email, :placeholder => 'Ingrese el mail' , :class => 'form-control', :required => true%>
+			</div>
+			
+			<div class="form-group">
+				<%= form.label :fono, "Fono:" %> 
+				<%= form.text_field :fono, :placeholder => 'Ingrese el fono' , :class => 'form-control', :required => true%>
+			</div>
+			
+			<div class="form-group">
+				<%= form.label :anexo, "Red Minsal:" %> 
+				<%= form.text_field :anexo, :placeholder => 'Ingrese el anexo' , :class => 'form-control', :required => true%>
+			</div>
+			
+			<div class="form-group">
+				<%= form.label :link, "Link:" %> 
+				<%= form.text_field :link, :placeholder => 'www.fonasa.cl' ,  :disabled => 'disabled', :class => 'form-control'%>
+			</div>
+			
+			<div class="form-group">
+				<%= submit_tag "Enviar" , :class => 'btn btn-primary' %>
+			</div>
+		
+		</div>
+	  
+	</div>
+   
+   
+   <br />
+   
+
+	
+	
+	
+	
+   
+   
+<% end %>
